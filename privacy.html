@@ -1,82 +1,116 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Capsule — Политика конфиденциальности</title>
+<title>Privacy Policy — Capsule - AI Cycle Tracker</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8f7fc; color: #1a1228; line-height: 1.7; padding: 24px 20px 60px; max-width: 680px; margin: 0 auto; }
-  h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
-  h2 { font-size: 18px; font-weight: 700; margin-top: 28px; margin-bottom: 8px; color: #7c3aed; }
-  p { margin-bottom: 14px; font-size: 15px; color: #374151; }
-  .date { font-size: 13px; color: #9ca3af; margin-bottom: 28px; }
-  ul { padding-left: 20px; margin-bottom: 14px; }
-  li { font-size: 15px; color: #374151; margin-bottom: 6px; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #334155; background: #f8fafc; padding: 20px; }
+  .container { max-width: 680px; margin: 0 auto; background: #fff; border-radius: 16px; padding: 32px 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  h1 { font-size: 24px; color: #1e1b4b; margin-bottom: 6px; }
+  .updated { font-size: 13px; color: #94a3b8; margin-bottom: 28px; }
+  h2 { font-size: 17px; color: #1e1b4b; margin: 24px 0 8px; padding-top: 16px; border-top: 1px solid #f1f5f9; }
+  h2:first-of-type { border-top: none; padding-top: 0; }
+  p { margin-bottom: 12px; font-size: 15px; }
+  ul { margin: 8px 0 12px 20px; font-size: 15px; }
+  li { margin-bottom: 4px; }
+  strong { color: #1e293b; }
   a { color: #7c3aed; }
-  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e5e7eb; font-size: 13px; color: #9ca3af; }
+  .highlight { background: #faf5ff; border-left: 3px solid #7c3aed; padding: 14px 16px; border-radius: 0 10px 10px 0; margin: 16px 0; font-size: 14px; }
+  .contact { background: #f1f5f9; padding: 16px; border-radius: 12px; margin-top: 20px; font-size: 14px; }
 </style>
 </head>
 <body>
-<h1>Политика конфиденциальности</h1>
-<p class="date">Дата вступления в силу: 1 марта 2026 г.</p>
+<div class="container">
 
-<p>Capsule («мы», «наше», «приложение») — это приложение для отслеживания менструального цикла. Мы серьёзно относимся к защите ваших персональных данных.</p>
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: March 12, 2026</p>
 
-<h2>1. Какие данные мы собираем</h2>
+<p>Capsule — AI Cycle Tracker ("Capsule", "the App", "we") is committed to protecting your privacy. This policy explains what data the App collects, how it is used, and with whom it is shared.</p>
+
+<h2>1. Data We Collect</h2>
+<p>Capsule stores the following data locally on your device:</p>
 <ul>
-  <li><strong>Данные аккаунта:</strong> email-адрес, никнейм (при регистрации)</li>
-  <li><strong>Данные о здоровье:</strong> даты менструаций, симптомы, настроение, заметки</li>
-  <li><strong>Данные медикаментов:</strong> названия и расписание приёма витаминов/лекарств</li>
-  <li><strong>Технические данные:</strong> тип устройства, версия ОС, идентификатор устройства</li>
+  <li><strong>Cycle data:</strong> menstrual period start/end dates, cycle length, period duration.</li>
+  <li><strong>Daily logs:</strong> symptoms (mood, pain level, energy, physical and emotional symptoms), flow intensity, notes.</li>
+  <li><strong>Vitamins/medications:</strong> supplement names, schedules, and completion status.</li>
+  <li><strong>Preferences:</strong> language, theme, notification settings.</li>
+</ul>
+<p>If you create an account (optional), we also collect:</p>
+<ul>
+  <li><strong>Authentication data:</strong> Apple ID token (via Sign in with Apple). We do not receive or store your Apple ID password.</li>
+  <li><strong>Nickname:</strong> a display name you choose within the App.</li>
+  <li><strong>Profile photo:</strong> if you upload one (stored in Supabase cloud storage).</li>
+</ul>
+<p>We do <strong>not</strong> collect your real name, phone number, physical address, or financial information.</p>
+
+<h2>2. How Data Is Stored</h2>
+<p>All cycle and symptom data is stored locally on your device using AsyncStorage. If you sign in, your data is also synced to a cloud database powered by <strong>Supabase</strong> (supabase.com) to enable cross-device access and backup. Supabase stores data in secure, encrypted infrastructure.</p>
+
+<h2>3. Third-Party AI Service — Data Sharing</h2>
+
+<div class="highlight">
+  <strong>Important:</strong> Capsule uses a third-party AI service to provide personalized wellness tips. Data is only shared with this service after you give explicit consent within the App.
+</div>
+
+<p><strong>Who receives data:</strong> Capsule sends data to <strong>Claude AI</strong>, a large language model developed by <strong>Anthropic, PBC</strong> (<a href="https://anthropic.com">anthropic.com</a>). Anthropic is a separate, independent company and is not affiliated with Capsule.</p>
+
+<p><strong>What data is sent:</strong></p>
+<ul>
+  <li>Current cycle phase (menstrual, follicular, ovulation, luteal)</li>
+  <li>Current cycle day (numeric value)</li>
+  <li>Average cycle length and average period duration</li>
+  <li>Symptoms you have logged (mood, pain, energy, and other tracked symptoms)</li>
 </ul>
 
-<h2>2. Как мы используем данные</h2>
+<p><strong>What is NOT sent:</strong></p>
 <ul>
-  <li>Для работы основных функций приложения (трекинг цикла, прогнозы, статистика)</li>
-  <li>Для генерации AI-советов на основе ваших симптомов и фазы цикла</li>
-  <li>Для синхронизации данных между устройствами (при наличии аккаунта)</li>
+  <li>Your name, email address, or Apple ID</li>
+  <li>Your age, location, or any device identifiers</li>
+  <li>Your profile photo</li>
+  <li>Raw calendar dates or historical cycle dates</li>
 </ul>
 
-<h2>3. AI-функции и Anthropic</h2>
-<p>Для генерации персонализированных советов приложение использует Claude AI от Anthropic. При использовании AI-функций:</p>
+<p><strong>Purpose of data sharing:</strong> The data is sent solely to generate a personalized AI-powered wellness response (e.g. cycle-phase advice, symptom insights) in real time.</p>
+
+<p><strong>Data retention by Anthropic:</strong> Anthropic processes Capsule's requests under a <strong>Zero Data Retention</strong> policy. This means your data is not stored on Anthropic's servers after the response is generated and is not used to train or improve AI models.</p>
+
+<p><strong>Your consent and control:</strong> The App requests your explicit permission before any data is sent to the AI service. You may decline, and the App will function normally without AI features. You can revoke your consent at any time in the App's Settings. Once revoked, no further data will be sent to the AI service.</p>
+
+<h2>4. Third-Party Services Summary</h2>
 <ul>
-  <li>Данные о симптомах и фазе цикла отправляются на серверы Anthropic</li>
-  <li>Anthropic не сохраняет персональные данные пользователей</li>
-  <li>AI-советы не являются медицинскими рекомендациями</li>
+  <li><strong>Anthropic (Claude AI):</strong> AI wellness tips generation. Data shared: cycle phase, cycle day, symptoms. Retention: Zero Data Retention.</li>
+  <li><strong>Supabase:</strong> Cloud authentication and data sync (optional, only if signed in). Data stored: cycle data, symptoms, profile.</li>
+  <li><strong>RevenueCat:</strong> Subscription management. Data shared: anonymous app user ID, purchase receipts. No health data is shared with RevenueCat.</li>
+  <li><strong>Apple (Sign in with Apple):</strong> Authentication only. We receive an identity token; Apple controls what information (email, name) is shared with us.</li>
 </ul>
 
-<h2>4. Хранение данных</h2>
-<p>Основные данные хранятся локально на вашем устройстве. При регистрации аккаунта данные также хранятся на серверах Supabase (облачная платформа с шифрованием).</p>
+<h2>5. Data Security</h2>
+<p>We use industry-standard security measures: encrypted data transmission (HTTPS/TLS), secure cloud storage via Supabase, and no plaintext storage of sensitive tokens. All AI requests are transmitted over encrypted connections.</p>
 
-<h2>5. Передача данных третьим лицам</h2>
-<p>Мы не продаём и не передаём ваши персональные данные третьим лицам, за исключением:</p>
+<h2>6. Children's Privacy</h2>
+<p>Capsule is rated 17+ and is not intended for children under 17. We do not knowingly collect data from children.</p>
+
+<h2>7. Your Rights</h2>
+<p>You have the right to:</p>
 <ul>
-  <li>Anthropic (Claude AI) — для генерации AI-советов</li>
-  <li>Supabase — для хранения и синхронизации данных аккаунта</li>
-  <li>RevenueCat — для управления подписками</li>
-  <li>Apple/Google — для обработки платежей</li>
+  <li>Access the data Capsule stores about you</li>
+  <li>Delete your account and all associated cloud data (available in Settings)</li>
+  <li>Revoke AI consent at any time (available in Settings)</li>
+  <li>Export your cycle data (PDF export available in the App)</li>
+  <li>Use the App without creating an account (all data stays on-device)</li>
 </ul>
 
-<h2>6. Безопасность</h2>
-<p>Мы используем шифрование при передаче данных (HTTPS/TLS). Приложение поддерживает биометрическую защиту (Face ID / Touch ID).</p>
+<h2>8. Changes to This Policy</h2>
+<p>We may update this policy from time to time. Changes will be reflected by the "Last updated" date at the top. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
 
-<h2>7. Ваши права</h2>
-<ul>
-  <li>Экспорт всех данных (PDF или JSON-бэкап)</li>
-  <li>Полное удаление аккаунта и всех данных</li>
-  <li>Отзыв согласия на использование AI-функций</li>
-</ul>
+<div class="contact">
+  <strong>Contact Us</strong><br>
+  If you have questions about this Privacy Policy or your data, contact us at:<br>
+  <a href="mailto:capsulecored@gmail.com">capsulecored@gmail.com</a>
+</div>
 
-<h2>8. Дети</h2>
-<p>Приложение не предназначено для лиц младше 13 лет. Мы сознательно не собираем данные детей.</p>
-
-<h2>9. Изменения политики</h2>
-<p>Мы можем обновлять эту политику. О существенных изменениях вы будете уведомлены через приложение.</p>
-
-<h2>10. Контакты</h2>
-<p>По вопросам конфиденциальности: <a href="mailto:capsulecored@gmail.com">capsulecored@gmail.com</a></p>
-
-<div class="footer">© 2026 Capsule. Все права защищены.</div>
+</div>
 </body>
 </html>
