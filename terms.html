@@ -1,100 +1,389 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Use — Capsule - AI Cycle Tracker</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,viewport-fit=cover">
+<meta name="theme-color" content="#faf9fe">
+<title>Terms of Use — Capsule</title>
+<meta name="description" content="Terms of Use for Capsule — AI Cycle Tracker.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #334155; background: #f8fafc; padding: 20px; }
-  .container { max-width: 680px; margin: 0 auto; background: #fff; border-radius: 16px; padding: 32px 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-  h1 { font-size: 24px; color: #1e1b4b; margin-bottom: 6px; }
-  .updated { font-size: 13px; color: #94a3b8; margin-bottom: 28px; }
-  h2 { font-size: 17px; color: #1e1b4b; margin: 24px 0 8px; padding-top: 16px; border-top: 1px solid #f1f5f9; }
-  h2:first-of-type { border-top: none; padding-top: 0; }
-  p { margin-bottom: 12px; font-size: 15px; }
-  ul { margin: 8px 0 12px 20px; font-size: 15px; }
-  li { margin-bottom: 4px; }
-  strong { color: #1e293b; }
-  a { color: #7c3aed; }
-  .highlight { background: #faf5ff; border-left: 3px solid #7c3aed; padding: 14px 16px; border-radius: 0 10px 10px 0; margin: 16px 0; font-size: 14px; }
-  .contact { background: #f1f5f9; padding: 16px; border-radius: 12px; margin-top: 20px; font-size: 14px; }
+  :root{
+    --bg: #faf9fe;
+    --bg-elev: #ffffff;
+    --ink: #1a1b1f;
+    --ink-soft: #5d5e66;
+    --ink-faint: #9b9ca5;
+    --rule: #e8e6ef;
+    --accent: #a80021;
+    --accent-soft: #ffdad9;
+    --warn-bg: #fff4e6;
+    --warn-ink: #7a3e00;
+    --warn-rule: #f3d8b0;
+    --radius: 18px;
+    --serif: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+    --sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.65;
+    font-feature-settings:'ss01','ss02';
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  .wrap{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 28px 120px;
+  }
+  @media (max-width:640px){
+    .wrap{padding:40px 20px 80px}
+  }
+
+  .masthead{margin-bottom:56px}
+  .eyebrow{
+    display:inline-block;
+    font-family:var(--sans);
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--accent);
+    background:var(--accent-soft);
+    padding:6px 12px;
+    border-radius:999px;
+    margin-bottom:20px;
+  }
+  h1.title{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size: clamp(40px, 8vw, 64px);
+    line-height:1.02;
+    letter-spacing:-0.02em;
+    margin:0 0 16px;
+    font-variation-settings:'opsz' 120,'SOFT' 30;
+  }
+  h1.title em{
+    font-style: italic;
+    font-variation-settings:'opsz' 120,'SOFT' 100;
+    color: var(--accent);
+  }
+  .meta{
+    font-family:var(--sans);
+    font-size:13px;
+    color:var(--ink-faint);
+    letter-spacing:0.02em;
+  }
+  .lede{
+    font-family:var(--serif);
+    font-size:20px;
+    line-height:1.5;
+    color:var(--ink-soft);
+    font-weight:400;
+    margin:32px 0 0;
+    letter-spacing:-0.005em;
+  }
+  .lede em{font-style:italic;color:var(--ink)}
+
+  section{
+    padding-top:48px;
+    border-top:1px solid var(--rule);
+    margin-top:48px;
+    scroll-margin-top:24px;
+  }
+  section:first-of-type{border-top:none;padding-top:0;margin-top:64px}
+
+  h2{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:26px;
+    line-height:1.15;
+    letter-spacing:-0.015em;
+    margin:0 0 20px;
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+  }
+  h2 .num{
+    font-size:12px;
+    font-family:var(--sans);
+    font-weight:700;
+    letter-spacing:0.14em;
+    color:var(--accent);
+    background:var(--accent-soft);
+    padding:4px 9px;
+    border-radius:999px;
+    transform:translateY(-3px);
+  }
+  h3{
+    font-family:var(--sans);
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--ink);
+    margin:28px 0 10px;
+  }
+  p{margin:0 0 14px}
+  p:last-child{margin-bottom:0}
+
+  ul{margin:0 0 16px;padding:0 0 0 22px}
+  li{margin:0 0 10px;padding-left:4px}
+  li::marker{color:var(--accent)}
+
+  strong{font-weight:700;color:var(--ink)}
+  em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--ink)}
+  a{
+    color:var(--accent);
+    text-decoration:none;
+    border-bottom:1px solid rgba(168,0,33,0.25);
+    transition:border-color .15s;
+  }
+  a:hover{border-bottom-color:var(--accent)}
+
+  .callout{
+    background: var(--bg-elev);
+    border-radius: var(--radius);
+    padding:20px 22px;
+    margin:18px 0;
+    box-shadow:0 1px 0 var(--rule);
+  }
+  .callout .label{
+    font-family:var(--sans);
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    margin-bottom:8px;
+  }
+
+  .warn{
+    background:var(--warn-bg);
+    color:var(--warn-ink);
+    border-radius:var(--radius);
+    padding:20px 22px;
+    margin:18px 0;
+    border:1px solid var(--warn-rule);
+  }
+  .warn .label{
+    font-family:var(--sans);
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--warn-ink);
+    opacity:0.7;
+    margin-bottom:8px;
+  }
+  .warn p{color:var(--warn-ink)}
+  .warn strong{color:var(--warn-ink)}
+
+  .contact{
+    margin-top:64px;
+    padding:32px;
+    background:var(--bg-elev);
+    border-radius:24px;
+    text-align:center;
+  }
+  .contact .big{
+    font-family:var(--serif);
+    font-size:22px;
+    font-style:italic;
+    font-weight:400;
+    color:var(--ink);
+    margin-bottom:6px;
+    letter-spacing:-0.005em;
+  }
+  .contact a{
+    font-family:var(--sans);
+    font-size:16px;
+    font-weight:600;
+  }
+
+  footer{
+    margin-top:48px;
+    text-align:center;
+    font-size:12px;
+    color:var(--ink-faint);
+    letter-spacing:0.02em;
+  }
+  footer a{color:var(--ink-faint);border-bottom:none}
+  footer a:hover{color:var(--ink)}
 </style>
 </head>
 <body>
-<div class="container">
+<div class="wrap">
+  <header class="masthead">
+    <span class="eyebrow">Capsule — AI Cycle Tracker</span>
+    <h1 class="title">Terms <em>of Use</em></h1>
+    <div class="meta">Last updated: April 20, 2026</div>
+    <p class="lede">
+      These Terms govern your use of Capsule — AI Cycle Tracker. By downloading, installing, or using the App, <em>you agree to these Terms</em>. If you do not agree, do not use the App.
+    </p>
+  </header>
 
-<h1>Terms of Use</h1>
-<p class="updated">Last updated: March 12, 2026</p>
+  <section>
+    <h2><span class="num">01</span> Description of Service</h2>
+    <p>Capsule is a menstrual cycle tracking application that helps users monitor their cycle, symptoms, intimacy, vitamins, and wellness. The App offers optional AI-powered features that provide personalized wellness tips based on your cycle data, as well as optional features for Apple Health integration, biometric lock, and partner sharing.</p>
+  </section>
 
-<p>These Terms of Use ("Terms") govern your use of Capsule — AI Cycle Tracker ("Capsule", "the App", "we", "us"). By downloading, installing, or using the App, you agree to these Terms.</p>
+  <section>
+    <h2><span class="num">02</span> Eligibility</h2>
+    <p>You must be at least <strong>16 years old</strong> (or the minimum age of digital consent in your jurisdiction, whichever is higher) to use Capsule. By using the App, you confirm that you meet this requirement. If you are below this age, you must stop using the App immediately.</p>
+  </section>
 
-<h2>1. Description of Service</h2>
-<p>Capsule is a menstrual cycle tracking application that helps users monitor their cycle, symptoms, vitamins, and wellness. The App offers optional AI-powered features that provide personalized wellness tips based on cycle data.</p>
+  <section>
+    <h2><span class="num">03</span> Account</h2>
+    <p>You may use Capsule without creating an account. All data will be stored locally on your device. If you choose to sign in (via Sign in with Apple or email), your data will be synced to our cloud service for backup and cross-device access. You are responsible for maintaining the security of your account and for all activity under it.</p>
+  </section>
 
-<h2>2. Eligibility</h2>
-<p>You must meet the minimum age requirement as determined by your local jurisdiction to use Capsule. By using the App, you confirm that you meet this requirement.</p>
+  <section>
+    <h2><span class="num">04</span> AI-Powered Features</h2>
+    <div class="warn">
+      <div class="label">Important</div>
+      <p>Capsule's AI features use a third-party service. AI-generated content is <strong>not medical advice</strong>.</p>
+    </div>
 
-<h2>3. Account</h2>
-<p>You may use Capsule without creating an account. All data will be stored locally on your device. If you choose to sign in (via Sign in with Apple or email), your data will be synced to our cloud service for backup and cross-device access. You are responsible for maintaining the security of your account.</p>
+    <h3>Third-party provider</h3>
+    <p>AI features are powered by <strong>Claude AI</strong>, developed by <strong>Anthropic, PBC</strong> (<a href="https://anthropic.com">anthropic.com</a>). Anthropic is an independent company not affiliated with Capsule.</p>
 
-<h2>4. AI-Powered Features</h2>
+    <h3>Consent required</h3>
+    <p>Before any data is sent to the AI service, the App will request your explicit consent. You may decline — the App will function normally without AI features. You can revoke consent at any time in Settings.</p>
 
-<div class="highlight">
-  <strong>Important:</strong> Capsule's AI features use a third-party service. AI-generated content is not medical advice.
-</div>
+    <h3>Data sent to AI</h3>
+    <p>When you use AI features, the following data is transmitted: current cycle phase, cycle day, average cycle and period duration, symptoms you have logged for the current day, and — only if you have enabled Health sync — recent Apple Health metrics (sleep, steps, resting heart rate). <strong>Intimacy logs, free-form notes, and partner-mode data are never transmitted to the AI service.</strong></p>
 
-<p><strong>Third-party AI provider:</strong> AI features are powered by <strong>Claude AI</strong>, developed by <strong>Anthropic, PBC</strong> (<a href="https://anthropic.com">anthropic.com</a>). Anthropic is an independent company not affiliated with Capsule.</p>
+    <h3>Retention</h3>
+    <p>Anthropic operates under a Zero Data Retention policy for Capsule requests. Your data is not stored after generating a response and is not used for model training.</p>
+  </section>
 
-<p><strong>Consent required:</strong> Before any data is sent to the AI service, the App will request your explicit consent. You may decline, and the App will function normally without AI features. You can revoke consent at any time in Settings.</p>
+  <section>
+    <h2><span class="num">05</span> Intimacy Tracking</h2>
+    <p>Capsule allows you to log information about sexual activity. This is a sensitive and entirely optional feature.</p>
+    <ul>
+      <li>Intimacy logs are <strong>never</strong> transmitted to the AI service or shared with partners through Partner Mode.</li>
+      <li>If you sign in, intimacy logs are synced to your Supabase account in the EU region, encrypted at rest. Without an account, they never leave your device.</li>
+      <li>You may enable an optional <strong>biometric lock</strong> (Face ID / Touch ID) that requires authentication before displaying intimacy data.</li>
+      <li>You are solely responsible for the physical security of your device and the data stored on it.</li>
+    </ul>
+    <div class="warn">
+      <div class="label">Not medical</div>
+      <p>Intimacy logs are <strong>not a form of contraception, STI prevention, or medical family planning</strong>. Capsule does not assist in sexual health decisions; consult a qualified healthcare professional.</p>
+    </div>
+  </section>
 
-<p><strong>Data sent to AI:</strong> When you use AI features, the following data is transmitted to Anthropic: current cycle phase, cycle day, average cycle and period duration, and symptoms you have logged. No personal data (name, email, age, photos) is sent.</p>
+  <section>
+    <h2><span class="num">06</span> Apple Health Integration</h2>
+    <p>When you enable Health sync, Capsule reads (but never writes) the following data from Apple Health: sleep hours, step count, and resting heart rate. Health data is used only to display alongside your daily log in the App, and may optionally be shared with the AI service if you have granted AI consent.</p>
+    <p>You may revoke Health access at any time through the iOS Settings app (Settings → Health → Data Access &amp; Devices → Capsule) or within Capsule's Settings.</p>
+  </section>
 
-<p><strong>Data retention:</strong> Anthropic operates under a Zero Data Retention policy for Capsule requests. Your data is not stored after generating a response and is not used for model training.</p>
+  <section>
+    <h2><span class="num">07</span> Partner Mode</h2>
+    <p>Capsule includes an optional Partner Mode, which allows you to share a limited read-only summary of your cycle with a partner who has their own Capsule account. Partner Mode shares:</p>
+    <ul>
+      <li>Current cycle phase</li>
+      <li>Upcoming period prediction</li>
+      <li>A selected mood snapshot</li>
+    </ul>
+    <p>Partner Mode does <strong>not</strong> share intimacy logs, free-form journal notes, medication records, or detailed symptom data. You may disconnect Partner Mode at any time from Settings, which immediately revokes your partner's access.</p>
+  </section>
 
-<h2>5. Medical Disclaimer</h2>
-<p>Capsule is a <strong>wellness tool</strong>, not a medical device. The App, including its AI-generated content, does not provide medical advice, diagnoses, or treatment recommendations. AI tips are for informational and educational purposes only.</p>
-<p>Always consult a qualified healthcare professional for medical decisions. Do not rely on Capsule for medical emergencies or clinical decisions. If you experience unusual symptoms, seek professional medical help.</p>
+  <section>
+    <h2><span class="num">08</span> Medical Disclaimer</h2>
+    <div class="warn">
+      <div class="label">Read carefully</div>
+      <p>Capsule is a <strong>wellness tool, not a medical device</strong>, and has not been reviewed by any health authority (FDA, CE, BfArM, or otherwise). The App, including its AI-generated content, does not provide medical advice, diagnoses, or treatment recommendations. AI tips are for informational and educational purposes only.</p>
+      <p style="margin-top:12px">Capsule is <strong>not a method of contraception or fertility planning</strong>. Predictions are probabilistic estimates based on historical data you enter, and they are not a reliable basis for preventing or achieving pregnancy.</p>
+    </div>
+    <p>Always consult a qualified healthcare professional for medical decisions. Do not rely on Capsule for medical emergencies or clinical decisions. If you experience unusual symptoms, seek professional medical help.</p>
+  </section>
 
-<h2>6. Subscriptions</h2>
-<p>Capsule offers a free tier and a paid subscription ("Capsule Plus") managed through Apple's App Store.</p>
-<ul>
-  <li>Subscriptions auto-renew unless cancelled at least 24 hours before the end of the current period</li>
-  <li>Payment is charged to your Apple ID account at confirmation of purchase</li>
-  <li>You can manage or cancel subscriptions in your Apple ID Settings</li>
-  <li>Free trial periods, if offered, will be forfeited upon purchasing a subscription</li>
-</ul>
+  <section>
+    <h2><span class="num">09</span> Subscriptions</h2>
+    <p>Capsule offers a free tier and a paid subscription ("Capsule Plus") managed through Apple's App Store.</p>
+    <ul>
+      <li>Subscriptions auto-renew unless cancelled at least 24 hours before the end of the current period.</li>
+      <li>Payment is charged to your Apple ID account at confirmation of purchase.</li>
+      <li>You can manage or cancel subscriptions in your Apple ID Settings.</li>
+      <li>Free trial periods, if offered, will be forfeited upon purchasing a subscription.</li>
+      <li><strong>Refunds are handled exclusively through Apple.</strong> We cannot issue direct refunds; please use Apple's refund request process at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</li>
+    </ul>
+  </section>
 
-<h2>7. User Conduct</h2>
-<p>You agree not to:</p>
-<ul>
-  <li>Reverse engineer, decompile, or attempt to extract source code from the App</li>
-  <li>Use the App for any unlawful purpose</li>
-  <li>Attempt to gain unauthorized access to our servers or services</li>
-  <li>Interfere with the proper operation of the App</li>
-</ul>
+  <section>
+    <h2><span class="num">10</span> User Conduct</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Reverse engineer, decompile, or attempt to extract source code from the App.</li>
+      <li>Use the App for any unlawful purpose.</li>
+      <li>Attempt to gain unauthorized access to our servers or other users' accounts.</li>
+      <li>Interfere with the proper operation of the App.</li>
+      <li>Use Partner Mode or any other feature to surveil, coerce, or intimidate another person.</li>
+    </ul>
+  </section>
 
-<h2>8. Intellectual Property</h2>
-<p>All content, design, code, and branding in Capsule are the property of Capsule and are protected by applicable intellectual property laws. "Noa" is the name of our AI assistant feature. You may not use our trademarks without prior written permission.</p>
+  <section>
+    <h2><span class="num">11</span> Intellectual Property</h2>
+    <p>All content, design, code, and branding in Capsule are the property of Capsule and are protected by applicable intellectual property laws. "Noa" is the name of our AI assistant feature. You may not use our trademarks, copy App designs, or create derivative works without prior written permission.</p>
+    <p>Journal entries, logged data, and notes created by you remain your property; you grant Capsule only the license necessary to store and sync them on your behalf.</p>
+  </section>
 
-<h2>9. Limitation of Liability</h2>
-<p>Capsule is provided "as is" without warranties of any kind. We are not liable for any damages arising from your use of the App, including but not limited to health decisions made based on information provided by the App or its AI features. Our total liability shall not exceed the amount you paid for the App in the 12 months preceding any claim.</p>
+  <section>
+    <h2><span class="num">12</span> Limitation of Liability</h2>
+    <p>Capsule is provided <em>"as is"</em> and <em>"as available"</em> without warranties of any kind, express or implied, including but not limited to fitness for a particular purpose, accuracy, or non-infringement. We are not liable for any direct, indirect, incidental, consequential, or special damages arising from your use of the App, including but not limited to health decisions, contraception or fertility-related decisions, or emotional distress. Our total liability shall not exceed the amount you paid for the App in the 12 months preceding any claim.</p>
+    <div class="callout">
+      <div class="label">Consumer rights preserved</div>
+      <p>Nothing in these Terms limits liability for gross negligence, intentional misconduct, or any liability that cannot be limited under applicable consumer protection law.</p>
+    </div>
+  </section>
 
-<h2>10. Termination</h2>
-<p>You may stop using Capsule at any time by deleting the App. You can delete your account and all cloud data from Settings. We reserve the right to suspend or terminate access for violation of these Terms.</p>
+  <section>
+    <h2><span class="num">13</span> Termination</h2>
+    <p>You may stop using Capsule at any time by deleting the App. You can delete your account and all cloud data from Settings → "Delete Account". We reserve the right to suspend or terminate access for violation of these Terms, including fraudulent subscription activity or abuse of Partner Mode.</p>
+  </section>
 
-<h2>11. Changes to Terms</h2>
-<p>We may update these Terms from time to time. Changes will be reflected by the "Last updated" date. Continued use of the App after changes constitutes acceptance of the updated Terms.</p>
+  <section>
+    <h2><span class="num">14</span> Changes to Terms</h2>
+    <p>We may update these Terms from time to time. Changes will be reflected by the "Last updated" date. Material changes will be communicated in the App. Continued use of the App after changes constitutes acceptance of the updated Terms.</p>
+  </section>
 
-<h2>12. Governing Law</h2>
-<p>These Terms are governed by the laws applicable in the jurisdiction of the App developer. Any disputes shall be resolved through good-faith negotiation before pursuing formal proceedings.</p>
+  <section>
+    <h2><span class="num">15</span> Governing Law</h2>
+    <p>These Terms are governed by the laws of the jurisdiction in which the App developer resides, without regard to conflict-of-law principles. Consumer protection rights under your local law are not affected. Any disputes shall first be resolved through good-faith negotiation; unresolved disputes may be referred to the competent court in the developer's jurisdiction, subject to mandatory consumer protection law in your country of residence.</p>
+  </section>
 
-<div class="contact">
-  <strong>Contact Us</strong><br>
-  If you have questions about these Terms, contact us at:<br>
-  <a href="mailto:capsulecored@gmail.com">capsulecored@gmail.com</a>
-</div>
+  <section>
+    <h2><span class="num">16</span> Apple-Specific Terms</h2>
+    <p>Where you download Capsule from the App Store, you acknowledge that:</p>
+    <ul>
+      <li>These Terms are between you and Capsule, not Apple. Apple is not responsible for the App or its content.</li>
+      <li>Apple has no obligation to provide maintenance or support for the App.</li>
+      <li>In the event of any failure of the App to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price of the App (if any). Apple has no further warranty obligation.</li>
+      <li>Apple is a third-party beneficiary of these Terms and may enforce them against you.</li>
+    </ul>
+  </section>
 
+  <section class="contact">
+    <div class="big"><em>Questions about these Terms?</em></div>
+    <a href="mailto:capsulecored@gmail.com">capsulecored@gmail.com</a>
+  </section>
+
+  <footer>
+    <p>© 2026 Capsule · <a href="/capsule-legal/privacy">Privacy Policy</a></p>
+  </footer>
 </div>
 </body>
 </html>
